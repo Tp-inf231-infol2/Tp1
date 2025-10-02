@@ -7,13 +7,13 @@ DOSSIER ALGORITHMIQUE : Somme de matrices
       *Dictionnaire de données 
 
 Noms des variables	 Types	 Description
-  T	Tableau d’entiers (int [])	
-  A première matrice 
-  B		Deuxième matrice
-  C		Matrice résultante
-  n	Entiers ( int )	Nombres de lignes
-  m		Nombres de colonnes
-  j		Index des colonnes dans la boucle
+  T:Tableau d’entiers (int [])	
+  A:première matrice 
+  B:Deuxième matrice
+  C:Matrice résultante
+  n:Entiers ( int )	 Nombres de lignes
+  m:Nombres de colonnes
+  j:Index des colonnes dans la boucle
 
 
 * Algorithme :
