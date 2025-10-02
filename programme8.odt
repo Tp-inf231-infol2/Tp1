@@ -11,18 +11,10 @@ DOSSIER ALGORITHMIQUE : Produit vectoriel
 Noms des variables
  Types
  Description
-A
-Entiers (int [])
-Composants du premier vecteur
-B
-Entiers (int [])
-Composants du deuxieme vecteur
-C
-Entiers (int [])
-Composants du vecteur resultant
-i
-int
-index
+A : Entiers (int [])Composants du premier vecteur
+B : Entiers (int [])Composants du deuxieme vecteur
+C : Entiers (int [])Composants du vecteur resultant
+i : entier(int) index
 
 
 
