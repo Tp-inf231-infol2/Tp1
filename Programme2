@@ -1,0 +1,83 @@
+DOSSIER ALGORITHMIQUE : Produit de deux matrices
+
+       *Problème : Calculer le produit de deux matrices A et B .
+
+       *Principe : Le produit de deux matrices s’obtient en faisant la somme des produits des elements de la ligne de la première matrice par ceux de la colonne de la deuxième matrice. Ici la matrice A sera de dimension m*n, la matrice B sera de dimension m*p et la matrice C de dimension n*p.
+
+      *Dictionnaire de données :
+
+Noms des variables	 Types	 Description
+A	Tableau a double entrée d’entiers (int [][])	Première matrice
+B		Deuxième matrice
+C		Matrice résultante
+n	Entiers ( int )	Nombres de lignes de A et C
+m		Nombres de colonnes de A et de lignes de B
+p		Nombres de colonnes de B et C
+i		Index de parcourt des boucles
+j		
+k		
+
+
+* Algorithme (Code C):
+
+
+#include <stdio.h>
+
+int main() {
+int i, j, k, n, m, p;
+printf("Entrez le nombre de lignes de la matrice A : ");
+scanf("%d", &n);
+printf("Entrez le nombre de colonnes de la matrice A : ");
+scanf("%d", &m);
+printf("Entrez le nombre de colonnes de la matrice B : ");
+scanf("%d", &p);
+
+int A[n][m], B[m][p], C[n][p];
+printf("Remplissage de la matrice A (%d x %d) :\n", n, m);
+for (i = 0; i < n; i++) {
+for (j = 0; j < m; j++) {
+printf("A[%d][%d] = ", i+1, j+1);
+scanf("%d", &A[i][j]);
+}
+}
+printf("Remplissage de la matrice B (%d x %d) :\n", m, p);
+for (i = 0; i < m; i++) {
+for (j = 0; j < p; j++) {
+printf("B[%d][%d] = ", i+1, j+1);
+scanf("%d", &B[i][j]);
+}
+}
+for (i = 0; i < n; i++) {
+for (j = 0; j < p; j++) {
+C[i][j] = 0;
+}
+}
+for (i = 0; i < n; i++) {
+for (j = 0; j < p; j++) {
+for (k = 0; k < m; k++) {
+C[i][j] += A[i][k] * B[k][j];
+}
+}
+}
+printf("Le produit des matrices A et B est :\n");
+for (i = 0; i < n; i++) {
+for (j = 0; j < p; j++) {
+printf("%d ", C[i][j]);
+}
+printf("\n");
+}
+
+return 0;
+}
+
+
+*Trace d’exécution
+
+
+
+
+* Complexité
+
+       -Espace : (n*m)+(m*p)+(n*p)+6
+       -Temps : n*m*p
+
